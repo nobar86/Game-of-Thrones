@@ -1,8 +1,13 @@
 class GoT
-
+   
     @@all = []
-
-    def initialize
+    attr_accessor :name, :culture, :aliases, :allegiances
+    
+    def initialize(name, culture, aliases, allegiances)
+        @name = name
+        @culture = culture
+        @aliases = aliases
+        @allegiances = allegiances
         @@all << self
     end
 

@@ -1,7 +1,7 @@
 class CLI
 
     def houses
-        ["Stark", "Lannister", "Targaryen", "Tyrell", "Baratheon", "Tarly", "Clegane", "Greyjoy"]
+        ["Stark", "Lannister", "Targaryen", "Tyrell", "Baratheon"]
     end
    
 
@@ -17,6 +17,11 @@ class CLI
         input = gets.strip
         API.get_GoT(input)
     end
+
+    def get_character
+
+    end
+
 
 
 end
