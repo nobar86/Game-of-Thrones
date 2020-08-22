@@ -14,7 +14,7 @@ class CLI
             puts ""
         end
         get_house
-        API.get_GoT(house)
+        
 
     end
 
@@ -74,7 +74,7 @@ class CLI
                 puts "Region: #{house.region}"
                 puts "CoatOfArms: #{house.coatOfArms}"
                 puts "Mottos: #{house.words}"
-                puts "Titles: #{house.titles.join}"
+                puts "Titles: #{house.titles.join(", ")}"
             else
                 puts "Invalid selection, please try again:"
             end
