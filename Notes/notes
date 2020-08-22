@@ -1,7 +1,7 @@
 1. git status - shows all changes made to the file
 2. git add . - saves code to commit later
-3. git commit -m “...” - overview of what weve done
-4. git push origin master -
+3. git commit -m “...” - overview of what we have done
+4. git push origin master - pushes to github
 
 
 Intructions:
@@ -29,9 +29,9 @@ Game of Thrones House App using the API Of Ice and Fire
 6. Accepts an ‘exit’ input from the user
 8. Accepts an invalid input from the user and returns them to the previous question
 
-CLI class- list of all characters and information/ data showing to the terminal
+CLI class- list of all houses and information/ data showing to the terminal
 API class- deals with all the API data/ information
-Character class- deals with all characters and their information
+Character class- deals with all houses and their information
 
 
 cd
