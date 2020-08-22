@@ -47,7 +47,7 @@ class CLI
             puts ""
             start
         end
-        # get_house_info
+        
     end
 
     def house_display
