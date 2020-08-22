@@ -4,13 +4,34 @@
 4. git push origin master -
 
 
+Intructions:
+1. Run the program: ‘ruby bin/run’
+2. Select your house of interest by number
+    - Your selection returns a list of associated houses based off your selection
+3. Select which house you would like to view based off your selection
+    - Your selection will return the attributes of that specific house
+4. Select ‘yes’/‘no’ to choose another house
+5. Exit at any time during the program: ‘exit’
+6. An invalid selection will return you to the previous question
 
 
+Game of Thrones House App using the API Of Ice and Fire
+1. Welcome the user
+2. Ask for user input- House of interest
+3. Return a list of associated houses with the users selection
+4. Ask for user input- house of interest based off selection 
+5. Returns house specific information for the selected house
+    a. Name
+    b. Region
+    c. Coat of Arms
+    d. Mottos
+    e. Titles
+6. Accepts an ‘exit’ input from the user
+8. Accepts an invalid input from the user and returns them to the previous question
 
-
-
-
-
+CLI class- list of all characters and information/ data showing to the terminal
+API class- deals with all the API data/ information
+Character class- deals with all characters and their information
 
 
 cd

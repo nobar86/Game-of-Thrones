@@ -1,13 +1,14 @@
 class GoT
    
     @@all = []
-    attr_accessor :name, :culture, :aliases, :allegiances
+    attr_accessor :name, :region, :coatOfArms, :words, :titles
     
-    def initialize(name, culture, aliases, allegiances)
+    def initialize(name, region, coatOfArms, words, titles)
         @name = name
-        @culture = culture
-        @aliases = aliases
-        @allegiances = allegiances
+        @region = region
+        @coatOfArms = coatOfArms
+        @words = words
+        @titles = titles
         @@all << self
     end
 
