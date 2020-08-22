@@ -99,7 +99,7 @@ class CLI
     end
 
     def check_exit?(input)
-        if input == "exit"
+        if input.downcase == "exit"
             exit
         end
     end
