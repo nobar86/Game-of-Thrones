@@ -90,7 +90,7 @@ class CLI
         puts "Would you like to make another selection: yes/no"
         input = gets.strip
         check_exit?(input)
-        if input == "yes"
+        if input.downcase == "yes"
             GoT.all.clear
             start
         else 
