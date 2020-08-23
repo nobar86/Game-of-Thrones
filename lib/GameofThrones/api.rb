@@ -4,7 +4,6 @@ class API
         url = "https://www.anapioficeandfire.com/api/houses?name=#{input}"
         response = HTTParty.get(url)
         response.each do |house|
-            # binding.pry 
             name = house["name"]
             region = house["region"]
             coatOfArms = house["coatOfArms"]
