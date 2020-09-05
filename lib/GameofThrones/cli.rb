@@ -14,19 +14,23 @@ class CLI
             puts ""
         end
         get_house
-        
-
     end
 
     def get_house
         input = gets.strip
         check_exit?(input)
+        house = @@houses[input.to_i - 1]
+        if GoT.find_by_name(house)
+            house_display
+        else
         get_houses(input)
         house_display
         select_again
     end
+end
 
     def get_houses(input)
+         GoT.find_by_name("house")
         if input == "1"
             API.get_house("House+Baratheon+of+Dragonstone")
             API.get_house("House+Baratheon+of+King's+Landing")
@@ -47,7 +51,7 @@ class CLI
             puts ""
             start
         end
-        
+       
     end
 
     def house_display
@@ -57,6 +61,7 @@ class CLI
             puts "#{index}: #{house.name}"
         end
         get_house_info
+        
     end
 
     def get_house_info
@@ -65,24 +70,26 @@ class CLI
         input = input.to_i
         if input > 0 && input <= GoT.all.length
         puts ""
-        house = GoT.all.find.with_index(1) do |house, index|
-            input == index
-        end
-            if house
-                puts "House Information:"
-                puts "Name: #{house.name}"
-                puts "Region: #{house.region}"
-                puts "CoatOfArms: #{house.coatOfArms}"
-                puts "Mottos: #{house.words}"
-                puts "Titles: #{house.titles.join(", ")}"
-            else
-                puts "Invalid selection, please try again:"
-            end
+        house = GoT.all[input - 1]
+        final_selection_display(house)
+           
         else
             check_exit?(input)
             puts "Invalid selection, please try again:"
             house_display
         end
+       
+    end
+
+    def final_selection_display(house)
+       
+        puts "House Information:"
+        puts "Name: #{house.name}"
+        puts "Region: #{house.region}"
+        puts "CoatOfArms: #{house.coatOfArms}"
+        house.display_motto
+        puts "Titles: #{house.titles.join(", ")}"
+
     end
 
     def select_again
@@ -91,7 +98,7 @@ class CLI
         input = gets.strip
         check_exit?(input)
         if input.downcase == "yes"
-            GoT.all.clear
+            # GoT.all.clear
             start
         else 
             exit
@@ -99,7 +106,7 @@ class CLI
     end
 
     def check_exit?(input)
-        if input.downcase == "exit"
+        if input == "exit"
             exit
         end
     end
